@@ -1,0 +1,1389 @@
+@font-face {
+    font-family: "Stylish";
+    src: url("fonts/rosmatika-font/RosmatikaRegular-BWA45.ttf");
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(56, 147, 196, 0.726);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+/*LOGIN & REGISTER PAGE CSS*/
+
+#authPage {
+    border-radius: 15px;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-out;
+}
+
+#authPage:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    position: relative;
+    bottom: 5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: rgba(56, 147, 196, 0.726);
+}
+
+#authForm {
+    position: relative;
+    bottom: 2%;
+    width: 320px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#twoBtn {
+    display: flex;
+    flex-direction: row;
+}
+
+#email {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    padding-left: 7px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#email::placeholder {
+    font-size: 18px;
+}
+
+#password {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    padding-left: 7px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#password::placeholder {
+    font-size: 18px;
+}
+
+#submitBtn {
+    font-size: 18px;
+    font-weight: bolder;
+    width: 142.5px;
+    height: 40px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgba(56, 147, 196, 0.726);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+#submitBtn:hover {
+    background-color: white;
+    color: rgba(56, 147, 196, 0.726);
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    cursor: pointer;
+}
+
+#register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    width: 142.5px;
+    height: 38.4px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgba(56, 147, 196, 0.726);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+#register:hover {
+    background-color: white;
+    color: rgba(56, 147, 196, 0.726);
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    cursor: pointer;
+}
+
+#registerForm {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 2%;
+}
+
+.radioMale{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.radioFemale{
+    width: 15px;
+    height: 15px;
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
+.radioOther{
+    width: 15px;
+    height: 15px;
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
+.maleLabel{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.femaleLabel {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.other{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+#username {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    padding-left: 7px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#signIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    width: 142.5px;
+    height: 38.4px;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgba(56, 147, 196, 0.726);
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+#signIn:hover {
+    background-color: white;
+    color: rgba(56, 147, 196, 0.726);
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    cursor: pointer;
+}
+
+.errorMsg {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+    font-size: 15.5px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+@keyframes dissapear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*FORUM CSS*/
+
+#forumPage {
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+
+#forumHeader {
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 100vw;
+    background-color: rgba(56, 147, 196, 0.726);
+}
+
+#leftPart {
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#middlePart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#rightPart {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#forumTitle {
+    position: static;
+    font-family: "Stylish";
+    font-size: 40px;
+    color: white;
+}
+
+#menuBurger {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 50px;
+    width: 40px;
+    height: 40px;
+    background: url(images/burgerMenu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#menuBurger:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+#burgerOpened {
+    z-index: 4;
+    right: 3%;
+    top: 110px;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    background-color: rgba(56, 147, 196, 0.726);
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
+
+.burgerSelection {
+    height: 75px;
+    width: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#profil {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+#logOut {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    border-radius: 0 0 10px 10px;
+}
+
+#profil:hover {
+    width: 190px;
+    transform: scale(1.05);
+    background-color: rgba(30, 84, 114, 0.726);
+}
+
+#logOut:hover {
+    width: 190px;
+    transform: scale(1.05);
+    background-color: rgba(30, 84, 114, 0.726);
+}
+
+#forum-triplePage {
+    margin-top: 10px;
+    width: 100vw;
+    height: auto;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#forum-leftPart {
+    width: 25vw;
+    height: auto;
+}
+
+#forum-middlePart {
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: auto;
+}
+
+.Title-T {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    color: rgba(42, 42, 42, 0.726);
+    padding-top: 10px;
+    margin-bottom: -10px;
+}
+
+.title {
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+    height: 40px;
+    width: 45%;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.posts {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 150px;
+    width: 90%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+    vertical-align: top;
+    resize: none;
+}
+
+.posts::placeholder {
+    color: rgb(37, 132, 183);
+}
+
+.title::placeholder {
+    color: rgb(37, 132, 183);
+}
+
+.category::placeholder {
+    color: rgb(37, 132, 183);
+}
+
+.category {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 40px;
+    width: 45%;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.formBox {
+    padding-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.submit {
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 5px;
+    background-color: rgba(56, 147, 196, 0.726);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    background-color: rgba(30, 84, 114, 0.726);
+}
+
+#forum-rightPart {
+    z-index: 1;
+    width: 25vw;
+    height: auto;
+}
+
+.Post-Upload {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 180px;
+    font-size: 20px;
+    margin-top: 5px;
+    background-color: rgba(56, 147, 196, 0.726);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+/*PROFIL CSS*/
+
+#profilPage {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+
+#profileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 100vw;
+    background-color: rgba(56, 147, 196, 0.726);
+}
+
+#profileleftPart {
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#profilemiddlePart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#profilerightPart {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 33.333vw;
+    height: 80px;
+}
+
+#profileforumTitle {
+    position: static;
+    font-family: "Stylish";
+    font-size: 40px;
+    color: white;
+}
+
+#profilemenuBurger {
+    margin-top: 5px;
+    margin-right: 50px;
+    width: 40px;
+    height: 40px;
+    background: url(images/burgerMenu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease-out;
+}
+
+#profilemenuBurger:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+#profileburgerOpened {
+    right: 1%;
+    top: 80px;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    background-color: rgba(56, 147, 196, 0.726);
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
+
+#forum {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+#forum:hover {
+    width: 190px;
+    transform: scale(1.05);
+    background-color: rgba(30, 84, 114, 0.726);
+}
+
+#profilelogOut {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    border-radius: 0 0 10px 10px;
+}
+
+#profilelogOut:hover {
+    width: 190px;
+    transform: scale(1.05);
+    background-color: rgba(30, 84, 114, 0.726);
+}
+
+#profile-img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+    border: 5px solid rgba(56, 147, 196, 0.726);
+    border-radius: 180px;
+    margin-bottom: 5px;
+}
+
+.labelUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+    width: 150px;
+    border: rgba(56, 147, 196, 0.726) 1 px solid;
+    border-radius: 15px;
+    background-color: rgba(56, 147, 196, 0.726);
+    transition: all 0.4s ease-out;
+}
+
+.labelUpload:hover {
+    cursor: pointer;
+    background-color: rgba(30, 84, 114, 0.726);
+    transform: scale(1.04);
+}
+
+#profil-gender{
+    padding-right: 5px;
+    padding-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+#profile-username {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    color: rgba(30, 84, 114, 0.726);
+}
+
+#profile-nickname-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#profile-nickname {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: rgb(77, 77, 77);
+}
+
+#profile-description {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+#profile-description-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#modify-nick {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/edit-icon-2375785_1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease-out;
+}
+
+#modify-bio {
+    margin-left: 10px;
+    margin-top: 7px;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/edit-icon-2375785_1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease-out;
+}
+
+#modify-nick:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#modify-bio:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#input-bio {
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#input-nick {
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#profile-creation-date {
+    margin-top: -20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: rgb(77, 77, 77);
+}
+
+.description {
+    color: rgba(56, 147, 196, 0.726);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#submitImg {
+    display: none;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+    width: 150px;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(56, 147, 196, 0.726);
+    transition: all 0.4s ease-out;
+}
+
+#submitImg:hover {
+    cursor: pointer;
+    background-color: rgba(30, 84, 114, 0.726);
+    transform: scale(1.04);
+}
+
+#profile-username-age {
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#profile-birthday {
+    margin-bottom: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+#profile-birthday-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+#modify-birthday {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/edit-icon-2375785_1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease-out;
+}
+
+#modify-birthday:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#input-birthday {
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#profile-age {
+    margin-top: 33px;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: rgb(105, 105, 105);
+}
+
+#profile-hobby-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#profile-hobby {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+#modify-hobby {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/edit-icon-2375785_1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.4s ease-out;
+}
+
+#modify-hobby:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#input-hobby {
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+/*Posts CSS*/
+
+#containerPost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.postersBox {
+    background-color: rgba(56, 147, 196, 0.726);
+    margin-bottom: 20px;
+    width: 95%;
+    border: 2px solid rgba(56, 147, 196, 0.726);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#containerPost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.postsDiv {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: auto;
+    background-color: rgba(56, 147, 196, 0.726);
+    transition: all 0.4s ease-out;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.444);
+    margin-bottom: 20px;
+}
+
+.post-title {
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+    font-size: 26px;
+}
+
+.postBody {
+    margin-top: -3px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.madeBy {
+    font-size: 15px;
+    color: white;
+}
+
+.postCateg {
+    font-style: oblique;
+    margin-top: -15px;
+    font-size: 15px;
+    color: rgba(30, 84, 114, 0.726);
+}
+
+.comment {
+    padding-left: 10px;
+    height: 30px;
+    width: 700px;
+    font-size: 20px;
+    color: rgba(30, 84, 114, 0.726);
+    border: 3px solid rgba(30, 84, 114, 0.726);
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.submitComment {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    border-radius: 15px;
+    background-color: rgba(56, 147, 196, 0.726);
+    transition: all 0.4s ease-out;
+}
+
+.date {
+    font-size: 13px;
+    color: rgb(65, 70, 74);
+}
+
+.username {
+    font-size: 13px;
+    color: rgba(30, 84, 114, 0.726);
+
+}
+
+.commentDiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    width: 94.5%;
+    height: auto;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: all 0.4s ease-out;
+}
+
+.inputComments {
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    border-radius: 15px;
+    height: 35px;
+    width: 82%;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.buttonComments {
+    height: 37px;
+    width: 120px;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    border-radius: 15px;
+    background-color: rgba(56, 147, 196, 0.726);
+    transition: all 0.4s ease-out;
+}
+
+.buttonComments:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.726);
+    color: black;
+    transform: scale(1.01);
+}
+
+.commentUsername {
+    font-size: 12px;
+    color: rgba(30, 84, 114, 0.726);
+}
+
+.commentBody {
+    margin-top: -7px;
+    margin-bottom: -7px;
+    font-size: 18px;
+}
+
+.commentDate {
+    font-size: 13px;
+    color: rgb(65, 70, 74);
+}
+
+.fleche {
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-left: 48%;
+    font-weight: bolder;
+    transition: all 0.4s ease-out;
+}
+
+.fleche:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    color: rgb(196, 196, 196);
+}
+
+.numbersOfComments {
+    margin-top: -5px;
+    margin-bottom: -1px;
+    display: none;
+    position: relative;
+    left: 43%;
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+}
+
+/*chat css*/
+
+.chat {
+    background: url(/images/158463-bubble-chat-icon-png-free-photo.png);
+    width: 110px;
+    height: 110px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 5%;
+    bottom: 8%;
+    transition: all 0.4s ease-out;
+}
+
+.chat:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*chatting section*/
+
+#chattingPage {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.726);
+    margin: 0;
+    padding: 0;
+    display: none;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#chattingContainer {
+    width: 75%;
+    height: 100%;
+    background-color: rgba(56, 147, 196, 0.225);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#whoIsHere {
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.726);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgba(18, 133, 195, 0.726);
+}
+
+#closeChat {
+    position: relative;
+    display: flex;
+    left: 90%;
+    font-size: 40px;
+    color: rgb(170, 169, 169);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.4s ease-out;
+}
+
+#closeChat:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+
+#messages {
+    width: 100%;
+    min-height: 90%;
+    background-color: rgba(56, 147, 196, 0.225);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#writeMessage {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(56, 147, 196, 0.225);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chatHere {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    resize: none;
+    width: 90%;
+    height: 43px;
+    font-size: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+#sendMessage {
+    height: 55px;
+    font-size: 17px;
+    width: 83px;
+    background-color: rgba(18, 133, 195, 0.726);
+    color: white;
+    border-radius: 15px;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-out;
+    margin-bottom: 10px;
+}
+
+#sendMessage:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.726);
+    color: black;
+    transform: scale(1.01);
+}
+
+.messageDiv {
+    width: 80%;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.messageDate {
+    margin-top: -10px;
+    font-size: 12px;
+    color: rgb(65, 70, 74);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.messageUsername {
+    margin-bottom: -10px;
+    font-size: 15px;
+    color: rgba(30, 84, 114, 0.726);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.messageBody {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.notification {
+    display: none;
+    position: absolute;
+    width: 1000px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.900);
+    color: black;
+    top: 1%;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.792) 1px 1px 5px;
+    transition: all 0.4s ease-out;
+}
+
+.notification:hover {
+    cursor: pointer;
+    background-color: rgb(214, 214, 214);
+}
+
+.notificationBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.notificationDate {
+    margin-top: -10px;
+    font-size: 12px;
+    color: rgb(65, 70, 74);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes notificationAnimation {
+    0% {
+        transform: translatey(-150%);
+    }
+
+    10% {
+        transform: translatey(0%);
+    }
+
+    25% {
+        transform: translatey(0%);
+    }
+
+    50% {
+        transform: translatey(0%);
+    }
+
+    75% {
+        transform: translatey(0%);
+    }
+
+    90% {
+        transform: translatey(0%);
+    }
+
+    100% {
+        transform: translatey(-150%);
+    }
+}
+
+.isTypingBox{
+    border: 1px solid rgba(114, 113, 113, 0.809);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.763);
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    bottom: 8.5%;
+    left: 1%;
+}
+
+.userStatus{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.usernameConnected{
+    color: rgba(30, 84, 114, 0.726);
+}
+
+.userStatusConnected{
+    color: green;
+}
+
+.userStatusOffline{
+    color: rgb(255, 4, 4);
+}
+
+.whoIsHereTitle{
+    color: grey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.userDiv:hover{
+    cursor: pointer;
+    background-color: rgba(198, 198, 198, 0.726);
+}
+
+.privateChatDiv{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    height:400px;
+    width: 400px;
+    right: 2%;
+    bottom: 0%;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+}
+
+.usernamePmDiv{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(56, 147, 196, 0.56);
+}
+
+.UnPm{
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.crossPm{
+    position: fixed;
+    right: 3%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    transition: all 0.4s ease-out;
+}
+
+.crossPm:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.PmChatt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 1%;
+}
+
+#pmChattTextArea{
+    display: flex;
+    width: 98%;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    resize: none;
+    border: 1px solid rgba(30, 84, 114, 0.726);
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+}

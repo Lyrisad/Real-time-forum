@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="notification">
+        <p class="notificationBody"></p>
+    </div>
+    <div id="authPage">
+        <div id="authForm">
+            <h1>Sign in</h1>
+            <form action="/login" autocomplete="on" method="post">
+                <input type="text" name="email" id="email" placeholder="Email or Name" autocomplete="off" required>
+                <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
+                <div id="twoBtn">
+                    <button type="submit" id="submitBtn">Sign In</button>
+                    <div id="register">register</div>
+                </div>
+            </form>
+            <p class="errorMsg"></p>
+        </div>
+        <div id="registerForm">
+            <h1>Register</h1>
+            <form action="/register" autocomplete="on" method="post">
+                <input type="radio" name="radioMale" class="radioMale" required>
+                <label for="radioMale" class="maleLabel">Male</label> 
+                <input type="radio" name="radioFemale" class="radioFemale" required>
+                <label for="radioFemale" class="femaleLabel">Female</label>
+                <input type="radio" name="radioOther" class="radioOther" required>
+                <label for="radioOther" class="other">Other</label>
+                <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" required>
+                <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
+                <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" required>
+                <div id="twoBtn">
+                    <button type="submit" id="submitBtn">Register</button>
+                    <div id="signIn">Sign In</div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div id="forumPage" style="display: none;">
+        <div id="forumHeader">
+            <div id="leftPart"></div>
+            <div id="middlePart">
+                <h2 id="forumTitle">SPARK|hive</h2>
+            </div>
+            <div id="rightPart">
+                <div id="menuBurger"></div>
+                <div id="burgerOpened" style="display: none;">
+                    <div id="profil" class="burgerSelection">Profil</div>
+                    <div id="logOut" class="burgerSelection">Log Out</div>
+                </div>
+            </div>
+        </div>
+        <div id="forum-triplePage">
+            <div id="forum-leftPart"></div>
+            <div id="forum-middlePart">
+                <form enctype='multipart/form-data' class="formBox" action="/newPost" method="post">
+                    <h1 class="Title-T">Create a post</h1>
+                    <input class="title" name="title" type="text" placeholder="title" autocomplete="off" autofocus
+                        required>
+                    <input class="category" name="category" type="text" placeholder="category" autocomplete="off"
+                        autofocus required>
+                    <textarea class="posts" name="body" type="text" placeholder="text" autocomplete="off" autofocus
+                        required></textarea>
+                    <input id="imagePost" name="image" type="file" placeholder="image" autocomplete="off" autofocus
+                        style="display: none;">
+                    <label class="Post-Upload" for="imagePost">Upload image</label>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+                <div id="containerPost">
+                </div>
+
+            </div>
+            <div id="forum-rightPart">
+                <div class="chat"></div>
+            </div>
+        </div>
+        <div id="chattingPage">
+            <div id="chattingContainer">
+                <div id="messages">
+                </div>
+                <div class="isTypingBox">
+                    <p class="notifTyping"></p>
+                </div>
+                <form id="writeMessage" action="" method="post">
+                    <textarea name="chatHere" id="chatHere" placeholder="Write your message..." required></textarea>
+                    <input id="chatUsername" type="text" hidden>
+                    <button id="sendMessage" type="submit">Send</button>
+                </form>
+            </div>
+            <div id="whoIsHere">
+                <div id="closeChat">x</div>
+            </div>
+            <div class="privateChatDiv">
+                <div class="usernamePmDiv">
+                    <p class="UnPm"></p>
+                    <div class="crossPm">x</div>
+                </div>
+                <div class="PmChatt">
+                    <textarea name="pmChattTextArea" id="pmChattTextArea" placeholder="Write your message .."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="profilPage" style="display: none;">
+        <div id="profileHeader">
+            <div id="profileleftPart"></div>
+            <div id="profilemiddlePart">
+                <h2 id="profileforumTitle">SPARK|hive</h2>
+            </div>
+            <div id="profilerightPart">
+                <div id="profilemenuBurger"></div>
+                <div id="profileburgerOpened" style="display: none;">
+                    <div id="forum" class="burgerSelection">Forum</div>
+                    <div id="profilelogOut" class="burgerSelection">Log Out</div>
+                </div>
+            </div>
+        </div>
+        <div id="profile-username-age">
+            <p id="profil-gender"></p>
+            <p id="profile-username"></p>
+            <p id="profile-age"></p>
+        </div>
+        <div id="profile-birthday-box">
+            <form action="/birthday" method="post" id="form-birthday">
+                <input type="text" name="birthday" id="input-birthday" style="display: none;"
+                    placeholder="FORMAT: YYYY-MM-DD">
+            </form>
+            <p id="profile-birthday"></p>
+            <div id="modify-birthday"></div>
+        </div>
+        <p id="profile-creation-date"></p>
+        <a id="profile-img-a" href="/images/user/default.png">
+            <img class="image" id="profile-img" src="/images/user/default.png">
+        </a>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input id="Upload-Image" type="file" name="file" autofocus accept="image/png, image/gif, image/jpeg"
+                onchange="setFileName(this.value)" style="display: none;">
+            <label class="labelUpload" for="Upload-Image">Modify image</label>
+            <button type="submit" id="submitImg">Confirm changes</button>
+        </form>
+        <div class="description"></div>
+        <div id="profile-nickname-box">
+            <form action="/nick" method="post" id="form-nick">
+                <input type="text" name="nick" id="input-nick" style="display: none;">
+            </form>
+            <p id="profile-nickname"></p>
+            <div id="modify-nick"></div>
+        </div>
+        <div id="profile-hobby-box">
+            <form action="/hobby" method="post" id="form-hobby">
+                <input type="text" name="hobby" id="input-hobby" style="display: none;">
+            </form>
+            <p id="profile-hobby"></p>
+            <div id="modify-hobby"></div>
+        </div>
+        <div id="profile-description-box">
+            <form action="/bio" method="post" id="form-bio">
+                <input type="text" name="bio" id="input-bio" style="display: none;">
+            </form>
+            <p id="profile-description"></p>
+            <div id="modify-bio"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
